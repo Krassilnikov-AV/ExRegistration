@@ -17,12 +17,13 @@ import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
 
-@WebServlet(name = "Register", urlPatterns = { "/Register" })
+@WebServlet(name = "RegisterServlet", urlPatterns = { "/registerServlet" })
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	static Logger logger = Logger.getLogger(RegisterServlet.class);
 
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");

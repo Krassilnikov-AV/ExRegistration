@@ -4,9 +4,7 @@
 
 package servlets;
 
-/**
- * Класс LoginServlet
- */
+
 
 import org.apache.log4j.Logger;
 import util.User;
@@ -25,6 +23,7 @@ public class LoginServlet extends HttpServlet {
 
 	static Logger logger = Logger.getLogger(LoginServlet.class);
 
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
